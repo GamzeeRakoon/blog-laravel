@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('usersUid');
             $table->string('usersEmail')->unique();
             $table->string('usersName');
+            $table->string('usersPwd');
             $table->boolean('is_admin')->default(false);
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('usersPwd');
             $table->rememberToken();
             $table->timestamps();
         });

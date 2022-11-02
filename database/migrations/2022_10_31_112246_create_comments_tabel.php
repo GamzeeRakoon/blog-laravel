@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->string('commentUser');
-            $table->text('commentText');
             $table->timestamps();
-            $table->string('postId');
+            $table->text('commentText')->nullable();
+            $table->Biginteger('comment_id')->unsigned();
+            $table->Biginteger('user_id')->unsigned();
         });
     }
 

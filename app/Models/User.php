@@ -19,9 +19,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'usersUid',
+        'usersEmail',
+        'usersName',
+        'usersPwd',
         'is_admin',
     ];
 
@@ -44,23 +45,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function users(): HasMany
+    public function comment(): HasMany
     {
-        return $this->hasMany(Thread::class);
+        return $this->hasMany(Comment::class);
     }
 
-    public function topics(): HasMany
+    public function post(): HasMany
     {
-        return $this->hasMany(Thread::class);
+        return $this->hasMany(Post::class);
     }
 
-    public function threa(): HasMany
+    public function isAdmin(): bool
     {
-        return $this->hasMany(Thread::class);
+        return $this->is_admin == true;
     }
 
-    public function threads(): HasMany
-    {
-        return $this->hasMany(Thread::class);
-    }
 }
