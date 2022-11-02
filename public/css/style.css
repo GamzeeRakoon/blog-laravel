@@ -1,0 +1,184 @@
+.body {
+    background-color: #1b1b1b;
+}
+
+.img-about {
+    width: 90;
+    height: 90;
+    transform: linear 0.6;
+}
+
+.img-about-2 {
+    width: 90;
+    height: 90;
+}
+
+.img-about:hover {
+    transform: scale(1.2);
+}
+
+p span {
+    display: block;
+}
+
+.nav-color {
+    background-color: #222222;
+}
+
+.main-size {
+    height: 85vh;
+}
+
+.custom-nav:hover {
+    color: #651caa !important;
+    cursor: pointer;
+}
+
+.custom-nav.active {
+    color: #651caa !important;
+}
+
+.pee {
+    padding-top: 10px;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.successMessage {
+    color: green;
+}
+
+.profile-insides {
+    height: 400px;
+    background-color: #414141;
+
+}
+
+.center-profile {
+    padding-top: 100px;
+}
+
+.list-user {
+    list-style-type: none;
+}
+
+.pfp-icon {
+    background-color: white;
+    width: 100;
+    height: 100;
+}
+
+.login {
+    padding-top: 20px;
+    height: 350px;
+    background-color: #414141;
+}
+
+.login-2 {
+    padding-top: 100px;
+}
+
+.signup {
+    padding-top: 20px;
+    height: 400px;
+    background-color: #414141;
+}
+
+.signup-2 {
+    padding-top: 100px;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background-color: #6e558d !important;
+    border: none !important;
+}
+
+.picture-down {
+    padding-top: 30px;
+}
+
+.post-area {
+    resize: none;
+}
+
+.blog-post {
+    background-color: #414141;
+    height: 300px;
+    margin-bottom: 50px;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.post-title {
+    color: #751fc5;
+    margin-bottom: 20px;
+}
+
+.post-title:hover {
+    color: #602896 !important;
+    text-decoration: underline;
+}
+
+.post-block {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.blog-post:hover {
+    background-color: #333333 !important;
+}
+
+.blog-title {
+    color: #651caa;
+    text-decoration: underline #370b5f;
+    margin-bottom: 50px;
+}
+
+.blog-text {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.user{
+    font-weight: bold;
+    color: white;
+}
+
+.time {
+    color: gray;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.userComment {
+    color: white;
+}
+
+.userComments {
+    margin-top: 20px;
+}
+
+.replies {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.input-text {
+    margin-bottom: 10px;
+}
+
+.margin-replies {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
