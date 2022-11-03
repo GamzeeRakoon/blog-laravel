@@ -1,8 +1,7 @@
 @extends('layouts.header')
 
-
 @section('pagetitle')
-    Home
+    User
 @endsection
 
 @section('content')

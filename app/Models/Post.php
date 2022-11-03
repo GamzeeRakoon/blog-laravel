@@ -13,7 +13,6 @@ class Post extends Model
         'postSummary',
         'postText',
         'postTitle',
-        'user_id',
     ];
 
     public function user()

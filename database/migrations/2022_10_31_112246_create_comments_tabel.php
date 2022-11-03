@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamps();
             $table->text('commentText')->nullable();
             $table->Biginteger('comment_id')->unsigned();
-            $table->Biginteger('user_id')->unsigned();
+            $table->foreignId('user_id')->constrained('users');
         });
     }
 
