@@ -14,17 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('main');
-})->name('main');
+    return view('welcome');
+});
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+Route::get('/account/user', function () {
+    return view('account.user');
+})->name('account.user');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/user', function () {
-    return view('user');
-})->name('user');
+require __DIR__.'/auth.php';

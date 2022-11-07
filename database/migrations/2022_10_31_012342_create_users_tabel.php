@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('usersUid');
-            $table->string('usersEmail')->unique();
-            $table->string('usersName');
-            $table->string('usersPwd');
+            $table->string('username');
+            $table->string('email')->unique();
+            $table->string('name');
+            $table->string('password');
             $table->boolean('is_admin')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

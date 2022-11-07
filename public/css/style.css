@@ -42,10 +42,6 @@ p span {
     padding-top: 10px;
 }
 
-.errorMessage {
-    color: red;
-}
-
 .successMessage {
     color: green;
 }
@@ -82,7 +78,7 @@ p span {
 
 .signup {
     padding-top: 20px;
-    height: 400px;
+    height: 450px;
     background-color: #414141;
 }
 
@@ -182,3 +178,12 @@ p span {
     margin-top: 100px;
 }
 
+.error {
+    list-style: none;
+    color: red;
+    text-align: center;
+}
+
+.signup-button {
+    margin-bottom: 10px;
+}

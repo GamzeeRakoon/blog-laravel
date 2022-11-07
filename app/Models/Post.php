@@ -10,18 +10,13 @@ class Post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'postSummary',
-        'postText',
-        'postTitle',
+        'summary',
+        'text',
+        'title',
     ];
 
-    public function user()
+    public function comments()
     {
-        return $this->belongsTo(User::class);
-    }
-
-    public function comment()
-    {
-        return $this->belongsTo(Comment::class);
+        return $this->hasMany(Comment::class);
     }
 }

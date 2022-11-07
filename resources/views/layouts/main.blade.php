@@ -1,3 +1,7 @@
+@php
+    $data = false
+@endphp
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,11 +22,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li class="nav-item">
-{{--                        @if ()--}}
-                            <a href='{{route('main')}}' class='nav-link text-white custom-nav'>Home</a>
-{{--                        @else--}}
-{{--                            <a href='{{asset('')}}' class='nav-link text-white active custom-nav'>Home</a>--}}
-{{--                        @endif--}}
+                        <a href="" class="nav-link text-white custom-nav active">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="https://www.nikirakoon.nl/index.html" class="nav-link text-white custom-nav">Portfolio</a>
@@ -31,22 +31,19 @@
                 <div class="text-end">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li class="nav-item">
-{{--                            @if ()--}}
-{{--                                <a href='{{asset()}}' class='nav-link text-white custom-nav'>Account</a>--}}
-{{--                            @elseif ()--}}
+                            @auth
+                                <a href='{{ route('account.user') }}' class='nav-link text-white custom-nav'>Account</a>
 {{--                                <a href='{{asset()}}' class='nav-link text-white custom-nav active'>Account</a>--}}
-{{--                            @elseif ()--}}
-                                <a href="{{route('login')}}" class='nav-link text-white custom-nav'>Login/Register</a>
-{{--                            @else--}}
-{{--                                <a href='{{asset()}}' class ='nav-link text-white custom-nav active'>Login/Register</a>--}}
-{{--                            @endif--}}
+                            @endauth
+
+                            @guest
+                                <a href="{{ route('login') }}" class='nav-link text-white custom-nav'>Login/Register</a>
+                            @endguest
                         </li>
                         <li class="nav-item">
-{{--                            @if ()--}}
-{{--                                <a href='{{asset()}}' class='nav-link text-white active custom-nav '>Post</a>--}}
-{{--                            @else--}}
-{{--                                <a href='{{asset()}}' class='nav-link text-white custom-nav '>Post</a>--}}
-{{--                            @endif--}}
+                            @if(auth()->user()isAdmin())
+                                <a href='' class='nav-link text-white active custom-nav '>Post</a>
+                            @endif
                         </li>
                     </ul>
                 </div>
@@ -55,7 +52,17 @@
     </header>
     <main>
         <section>
-            @yield('content')
+            <div class="container text-center text-white">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col login-2">
+                        @yield('content')
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
