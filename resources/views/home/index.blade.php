@@ -1,17 +1,20 @@
 @extends('layouts.main')
 
+
 @section('pagetitle')
-    home
+    Home
 @endsection
 
 @section('content')
-    <div>
-        <a class='post-block' href=''>
+    <div class="col-7 signup-2">
+        @foreach($posts as $post)
+        <a class='post-block' href='{{ route('post.index', [ 'id' => $post->id]) }}'>
             <div class='text-start blog-post rounded-4 text-white'>
-                <h1 class='post-title'>test</h1>
-                <p>01-03-04</p>
-                <p class='fs-4'>testestest</p>
+                <h1 class='post-title'>{{ $post->title }}</h1>
+                <p>{{ $post->created_at }}</p>
+                <p class='fs-4'>{{ $post->summary }}</p>
             </div>
         </a>
+        @endforeach
     </div>
 @endsection

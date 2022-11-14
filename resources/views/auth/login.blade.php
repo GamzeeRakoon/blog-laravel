@@ -6,6 +6,7 @@
 @endsection
 
 @section('content')
+    <div class="col signup-2">
                 <div class="login rounded-4">
                     <form action="{{route('login')}}" method="post" class="container text-center text-white" >
                         @csrf
@@ -36,4 +37,5 @@
                         @endif
                     </div>
                 </div>
+    </div>
 @endsection

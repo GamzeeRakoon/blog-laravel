@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('/account/user', function () {
-    return view('account.user');
-})->name('account.user');
+Route::get('/account/user', [UserController::class, 'user'])->name('account.user');
+
+Route::get('/post/{id}', [PostController::class, 'index'])->name('post.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

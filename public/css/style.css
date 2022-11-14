@@ -187,3 +187,15 @@ p span {
 .signup-button {
     margin-bottom: 10px;
 }
+
+.margin {
+    margin-right: 20px;
+    margin-left: 20px;
+    list-style: none;
+}
+
+.user {
+    padding-top: 20px;
+    height: 200px;
+    background-color: #414141;
+}
