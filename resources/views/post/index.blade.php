@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="col-7 signup-2">
-        <div>
+        <div class="blog-seperator">
             <h1 class='p blog-title'>{{$post->title}}</h1>
             <p class='text-white text-start blog-text'>
                 {!!nl2br($post->text)!!}

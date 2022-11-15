@@ -36,14 +36,14 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'topic_id' => 'required | exists:topic,id' ,
-            'user_id' => 'required | exists:user_id' ,
-            'content' => 'required'
+            'post_id' => 'required | exists:posts,id' ,
+            'user_id' => 'required | exists:users,id' ,
+            'text' => 'required'
         ]);
 
         Comment::create(
             $request->only(
-                ['topic_id', 'user_id', 'text']
+                ['post_id', 'user_id', 'text']
             )
         );
 

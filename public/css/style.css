@@ -133,7 +133,6 @@
 .userComment {
     color: white;
     padding-left: 10px;
-    border-bottom: grey 3px solid;
 }
 
 .replies {
@@ -173,4 +172,8 @@
 
 .post-margin {
     margin-bottom: 50px;
+}
+
+.blog-seperator {
+    border-bottom: grey 3px solid;
 }
