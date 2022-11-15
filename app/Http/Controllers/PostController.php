@@ -4,17 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class PostController extends Controller
 {
-    public function index(int $id) {
+    public function index( Post $post ) : View
+    {
+        $post->load(['user', 'comments', 'comments.user']);
 
-//        $totalposts = Post::count();
-
-        $post = Post::with(['user', 'comments', 'comments.user'])
-            ->where('id', $id)
-            ->first();
-
-        return view('post.index', compact('post',));
+        return view('post.index', compact('post'));
     }
 }

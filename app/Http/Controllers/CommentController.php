@@ -35,16 +35,16 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'post_id' => 'required | exists:posts,id' ,
-            'user_id' => 'required | exists:users,id' ,
+        $validatedData = $request->validate([
             'text' => 'required'
         ]);
 
         Comment::create(
-            $request->only(
-                ['post_id', 'user_id', 'text']
-            )
+            $validatedData + [
+                'post_id' => $id,
+
+                'user_id' => auth()->id()
+            ]
         );
 
         return redirect()->back();

@@ -22,7 +22,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/account/user', [UserController::class, 'user'])->name('account.user');
 
-Route::get('/post/{id}', [PostController::class, 'index'])->name('post.index');
+Route::get('/post/{post}', [PostController::class, 'index'])->name('post.index');
 
 Route::get('/blog/creation', [CreationController::class, 'index'])->name('post.creation');
 

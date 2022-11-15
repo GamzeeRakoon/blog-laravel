@@ -35,16 +35,14 @@ class CreationController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required' ,
-            'text' => 'required' ,
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'text' => 'required',
             'summary' => 'required'
         ]);
 
         Post::create(
-            $request->only(
-                ['title', 'text', 'summary']
-            )
+            $validatedData
         );
 
         return redirect()->back();

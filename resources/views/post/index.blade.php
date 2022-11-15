@@ -23,8 +23,6 @@
             <div>
                 <form action='{{ route('comment.store', ['id' => $post->id]) }}' method='post'>
                     @csrf
-                    <input type='hidden' name='post_id' value='{{ $post->id }}'>
-                    <input type='hidden' name='user_id' value='{{ auth()->user()->id }}'>
                     <textarea name='text' class='form-control input-text' placeholder='comment' rows='4' cols='10'></textarea>
                     <button class='btn-primary btn' type='submit'>add Comment</button>
                 </form>
