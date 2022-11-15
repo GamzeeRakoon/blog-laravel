@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\PostController;
+use \App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/account/user', [UserController::class, 'user'])->name('account.user');
 
 Route::get('/post/{id}', [PostController::class, 'index'])->name('post.index');
+
+Route::resource('/comment', CommentController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

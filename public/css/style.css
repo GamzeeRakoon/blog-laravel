@@ -2,31 +2,8 @@
     background-color: #1b1b1b;
 }
 
-.img-about {
-    width: 90;
-    height: 90;
-    transform: linear 0.6;
-}
-
-.img-about-2 {
-    width: 90;
-    height: 90;
-}
-
-.img-about:hover {
-    transform: scale(1.2);
-}
-
-p span {
-    display: block;
-}
-
 .nav-color {
     background-color: #222222;
-}
-
-.main-size {
-    height: 85vh;
 }
 
 .custom-nav:hover {
@@ -141,11 +118,7 @@ p span {
 .blog-text {
     width: 100%;
     word-wrap: break-word;
-}
-
-.user{
-    font-weight: bold;
-    color: white;
+    font-size: large;
 }
 
 .time {
@@ -153,15 +126,14 @@ p span {
 }
 
 .comments {
-    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .userComment {
     color: white;
-}
-
-.userComments {
-    margin-top: 20px;
+    padding-left: 10px;
+    border-bottom: grey 3px solid;
 }
 
 .replies {
@@ -195,7 +167,10 @@ p span {
 }
 
 .user {
-    padding-top: 20px;
-    height: 200px;
-    background-color: #414141;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+
+.post-margin {
+    margin-bottom: 50px;
 }
