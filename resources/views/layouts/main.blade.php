@@ -43,7 +43,7 @@
                         @auth
                         <li class="nav-item">
                             @if(auth()->user()->isAdmin())
-                                <a href='' class='nav-link text-white active custom-nav '>Post</a>
+                                <a href='{{ route('post.creation') }}' class='nav-link text-white active custom-nav '>Post</a>
                             @endif
                         </li>
                             @endauth

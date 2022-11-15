@@ -5,6 +5,7 @@ use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\PostController;
 use \App\Http\Controllers\CommentController;
+use \App\Http\Controllers\CreationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,11 @@ Route::get('/account/user', [UserController::class, 'user'])->name('account.user
 
 Route::get('/post/{id}', [PostController::class, 'index'])->name('post.index');
 
+Route::get('/blog/creation', [CreationController::class, 'index'])->name('post.creation');
+
 Route::resource('/comment', CommentController::class);
+
+Route::resource('/creation', CreationController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
