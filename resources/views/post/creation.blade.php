@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('post')
+    active
+@endsection
+
 @section('pagetitle')
     Creation
 @endsection

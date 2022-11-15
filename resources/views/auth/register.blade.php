@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('login')
+    active
+@endsection
+
 @section('pagetitle')
     Register
 @endsection

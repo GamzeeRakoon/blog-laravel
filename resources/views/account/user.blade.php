@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('account')
+    active
+@endsection
+
 @section('pagetitle')
     User
 @endsection
