@@ -41,7 +41,7 @@ class CommentController extends Controller
 
         Comment::create(
             $validatedData + [
-                'post_id' => $id,
+                'post_id' => $request->id,
 
                 'user_id' => auth()->id()
             ]

@@ -21,7 +21,7 @@
 @auth
         <div class='text-start margin-replies'>
             <div>
-                <form action='{{ route('comment.store', ['id' => $post->id]) }}' method='post'>
+                <form method='post' action='{{ route('comment.store', ['id' => $post->id]) }}'>
                     @csrf
                     <textarea name='text' class='form-control input-text' placeholder='comment' rows='4' cols='10'></textarea>
                     <button class='btn-primary btn' type='submit'>add Comment</button>
